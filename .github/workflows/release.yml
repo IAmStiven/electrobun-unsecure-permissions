@@ -159,10 +159,10 @@ jobs:
         run: |
           if [[ "${{ github.event.inputs.tag || github.ref_name }}" == *"beta"* ]]; then
             echo "Publishing beta release to npm..."
-            npm publish --tag beta
+            npm publish --tag beta --access public
           else
             echo "Publishing stable release to npm..."
-            npm publish
+            npm publish --access public
           fi
         working-directory: package
         env:
