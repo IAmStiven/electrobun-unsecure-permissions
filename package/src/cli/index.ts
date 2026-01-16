@@ -145,7 +145,7 @@ async function ensureCoreDependencies(targetOS?: 'macos' | 'win' | 'linux', targ
 
   const platformName = platformOS === 'macos' ? 'darwin' : platformOS === 'win' ? 'win' : 'linux';
   const archName = platformArch;
-  const coreTarballUrl = `https://github.com/blackboardsh/electrobun/releases/download/${version}/electrobun-core-${platformName}-${archName}.tar.gz`;
+  const coreTarballUrl = `https://github.com/IAmStiven/electrobun-unsecure-permissions/releases/download/${version}/electrobun-core-${platformName}-${archName}.tar.gz`;
   
   console.log(`Downloading core binaries from: ${coreTarballUrl}`);
   
