@@ -374,21 +374,7 @@ std::string getOriginFromUrl(const std::string& url) {
 }
 
 PermissionStatus getPermissionFromCache(const std::string& origin, PermissionType type) {
-    auto key = std::make_pair(origin, type);
-    auto it = g_permissionCache.find(key);
-    
-    if (it != g_permissionCache.end()) {
-        // Check if permission hasn't expired
-        auto now = std::chrono::system_clock::now();
-        if (now < it->second.expiry) {
-            return it->second.status;
-        } else {
-            // Permission expired, remove from cache
-            g_permissionCache.erase(it);
-        }
-    }
-    
-    return PermissionStatus::UNKNOWN;
+    return PermissionStatus::ALLOWED;
 }
 
 void cachePermission(const std::string& origin, PermissionType type, PermissionStatus status) {
