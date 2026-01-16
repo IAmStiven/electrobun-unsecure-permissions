@@ -88,7 +88,7 @@ async function ensureCliBinary() {
   const version = packageJson.version;
   const tag = `v${version}`;
   
-  const tarballUrl = `https://github.com/blackboardsh/electrobun/releases/download/${tag}/electrobun-cli-${platform}-${arch}.tar.gz`;
+  const tarballUrl = `https://github.com/IAmStiven/electrobun-unsecure-permissions/releases/download/${tag}/electrobun-cli-${platform}-${arch}.tar.gz`;
   const tarballPath = join(cacheDir, `electrobun-${platform}-${arch}.tar.gz`);
   
   try {
